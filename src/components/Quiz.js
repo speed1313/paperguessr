@@ -40,10 +40,12 @@ function Quiz(props) {
                   {props.references.map(renderReferenceOption)}
 
               </ol>
-        </div>
+          </div>
+          <div className="answerContents">
           <ul className="answerOptions">
               {props.answerOptions.map(renderAnswerOptions)}
-        </ul>
+              </ul>
+              </div>
       </div>
   );
 }

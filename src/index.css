@@ -84,6 +84,11 @@ body {
 .answerOption:hover {
   background-color: #eefbfe;
 }
+.answerContents {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
 
 .radioCustomButton {
   position: absolute;

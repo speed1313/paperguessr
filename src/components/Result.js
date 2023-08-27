@@ -87,8 +87,10 @@ function Result(props) {
         <button onClick={props.onRestart}>Retry</button>
       </div>
       <div className="ContactMe">
-        <h6>If you have any comments or questions, please contact <a href="https://twitter.com/strayer_13">@strayer_13</a></h6>
-        </div>
+        <h5>If you have any comments or questions, please contact <a href="https://twitter.com/strayer_13">@strayer_13</a></h5>
+         <small>Source: <a href="https://github.com/speed1313/paperguessr">https://github.com/speed1313/paperguessr</a></small>
+      </div>
+
 
     </div>
 

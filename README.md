@@ -2,9 +2,10 @@
 PaperGuessr is a quiz game focused on testing your knowledge of papers in the Machine Learning field, inspired by GeoGuessr.
 
 
-# Welcome to contributing to creating the game's content!
+# Welcome to your contribution!
 The questions of this game are located within the 'api' directory, and there are only a few questions available at the moment. We are looking for individuals who can help us increase the number of questions."
 
+![image](image.png)
 
 
 # TODO features
