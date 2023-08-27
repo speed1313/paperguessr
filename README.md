@@ -1,5 +1,5 @@
 # PaperGuessr
-PaperGuessr is a quiz game focused on testing your knowledge of papers in the Machine Learning field, inspired by GeoGuessr.
+PaperGuessr is a quiz game focused on testing your knowledge of papers in the Machine Learning field, inspired by GeoGuessr and CodeGuessr.
 
 ![image](image.png)
 
@@ -13,6 +13,14 @@ The questions of this game are located within the 'api' directory, and there are
 - [ ] Add a timer to the game
 - [ ] your answer history in the result page
 - [ ] Add more questions
+
+## References
+- https://mitchgavan.com/react-quiz/
+- https://t-cool.hateblo.jp/entry/2019/08/07/060437
+- https://www.geoguessr.com/
+- https://codeguessr.vercel.app/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -61,7 +69,6 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Code Splitting
-
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
 ### Analyzing the Bundle Size

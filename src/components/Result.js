@@ -44,7 +44,7 @@ function renderResultTable(key) {
 }
 
 function Result(props) {
-  const shareUrl = 'http://github.com';
+  const shareUrl = 'https://paperguessr.vercel.app/';
   const title = "I got " + props.quizResult + " points on paperguerssr";
   return (
     <div>
