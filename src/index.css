@@ -43,6 +43,9 @@ body {
   padding: 1.5rem 2.5rem;
 }
 
+.quiz {
+ border-bottom: 5rem;
+}
 /* Quiz Component */
 .answerOptions {
   margin: 0;
@@ -69,6 +72,8 @@ body {
 }
 .referenceContents {
   text-align: center;
+  width: 80%;
+  margin: auto;
 }
 
 /* AnswerOption Component */
@@ -112,7 +117,7 @@ body {
   display: inline-block;
   vertical-align: middle;
   background: #fff;
-  border: 1px solid #bbb;
+  border: 1px solid #bbbbbb;
   border-radius: 50%;
   transition: all 0.3s;
 }
@@ -154,4 +159,15 @@ body {
 .fade-appear.fade-appear-active {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
+}
+
+.ResultTable {
+  text-align: center;
+  width: 10%;
+  margin: auto;
+}
+.ContactMe {
+  text-align: right;
+  width: 80%;
+  hight: 80%;
 }

@@ -1,3 +1,16 @@
+# PaperGuessr
+PaperGuessr is a quiz game focused on testing your knowledge of papers in the Machine Learning field, inspired by GeoGuessr.
+
+
+# Welcome to contributing to creating the game's content!
+The questions of this game are located within the 'api' directory, and there are only a few questions available at the moment. We are looking for individuals who can help us increase the number of questions."
+
+
+
+# TODO features
+- [ ] Add a timer to the game
+- [ ] your answer history in the result page
+- [ ] Add more questions
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

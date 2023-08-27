@@ -19,6 +19,7 @@ class App extends Component {
       answer: '',
       correctAnswer: '',
       answersCount: 0,
+      resultTable: [],
       result: ''
     };
 
@@ -27,7 +28,8 @@ class App extends Component {
 
   create4AnswerOptions(trueOption) {
     let answerOptions = [];
-    let falseOptions = paperTitles;
+    // deep copy
+    let falseOptions = paperTitles.slice();
     falseOptions.splice(falseOptions.indexOf(trueOption), 1);
     falseOptions = this.shuffleArray(falseOptions);
     falseOptions = falseOptions.slice(0, 3);
@@ -77,6 +79,7 @@ class App extends Component {
       answer: '',
       correctAnswer: quizQuestions[0].answer,
       answersCount: 0,
+      resultTable: [],
       result: ''
     });
   }
@@ -100,6 +103,15 @@ class App extends Component {
       answersCount: answer === state.correctAnswer ? ++state.answersCount : state.answersCount,
       answer: answer
     }));
+    if (answer === this.state.correctAnswer) {
+      this.setState((state, props) => ({
+        resultTable: state.resultTable.concat(true)
+      }));
+    } else {
+      this.setState((state, props) => ({
+        resultTable: state.resultTable.concat(false)
+      }));
+    }
   }
 
   setNextQuestion() {
@@ -142,7 +154,7 @@ class App extends Component {
   }
 
   renderResult() {
-    return <Result quizResult={this.state.result} onRestart={this.handleRestart} />;
+    return <Result quizResult={this.state.result} onRestart={this.handleRestart} resultTable={this.state.resultTable} />;
   }
 
   render() {

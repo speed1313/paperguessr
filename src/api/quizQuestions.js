@@ -89,6 +89,66 @@ var quizQuestions = [
         ],
         answer: "Playing Atari with Deep Reinforcement Learning",
     },
+    {
+        references: [
+            {
+                title: "Lessons from the netflix prize challenge",
+                authors: "R.M. Bell and Y. Koren",
+                year: 2007,
+            },
+            {
+                title: "Large scale visual recognition challenge 2010",
+                authors: "A. Berg, et al.",
+                year: 2010,
+            },
+            {
+                title: "Random forests",
+                authors: "L. Breiman",
+                year: 2001,
+            },
+            {
+                title: "Multi-column deep neural networks for image classification",
+                authors: "D. Ciresan, et al.",
+                year: 2012,
+            },
+            {
+                title: "High-performance neural networks for visual object classification",
+                authors: "D.C. Ciresan, et al.",
+                year: 2011,
+            }
+        ],
+        answer: "ImageNet Classification with Deep Convolutional Neural Networks",
+    },
+    {
+        references: [
+            {
+                title: "Generalized denoising auto-encoders as generative models",
+                authors: "Bengio, et al.",
+                year: 2013,
+            },
+            {
+                title: "Auto-encoding variational bayes",
+                authors: "Kingma, et al.",
+                year: 2014,
+            },
+            {
+                title: "ImageNet classification with deep convolutional neural networks",
+                authors: "Krizhevsky, et al.",
+                year: 2012,
+            },
+            {
+                title: " Stochastic backpropagation and approximate inference in deep generative models",
+                authors: "Rezende, et al.",
+                year: 2014,
+            },
+            {
+                title: "A generative process for sampling contractive auto-encoders",
+                authors: "Rifai, et al.",
+                year: 2012,
+            },
+        ],
+        answer: "Generative Adversarial Nets",
+    }
 ];
 
 export default quizQuestions;
