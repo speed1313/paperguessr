@@ -46,6 +46,7 @@ function renderResultTable(key) {
 function Result(props) {
   const shareUrl = 'https://paperguessr.vercel.app/';
   const title = "I got " + props.quizResult + " points on paperguerssr";
+  const hashtags = ["paperguessr"];
   return (
     <div>
       <h2>Results</h2>
@@ -60,14 +61,16 @@ function Result(props) {
 
       <div className="Demo__some-network">
           <TwitterShareButton url={shareUrl}
-            title={title}
+          title={title}
+          hashtags={hashtags}
             className="Demo__some-network__share-button"
           >
             <TwitterIcon size={32} round />
         </TwitterShareButton>
         <LineShareButton
             url={shareUrl}
-            title={title}
+          title={title}
+
             className="Demo__some-network__share-button"
           >
             <LineIcon size={32} round />
