@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "PaperGueessr",
+  "name": "Guess the title of the paper from the reference section.",
   "icons": [
     {
       "src": "favicon.ico",

@@ -1,6 +1,8 @@
 # PaperGuessr
 PaperGuessr is a quiz game focused on testing your knowledge of papers in the Machine Learning field, inspired by GeoGuessr and CodeGuessr.
 
+Guess the title of the paper from the reference section.
+
 ![image](image.png)
 
 # Welcome to your contribution!
