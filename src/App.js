@@ -6,6 +6,9 @@ import Result from './components/Result';
 import logo from './svg/logo.svg';
 import './App.css';
 
+import { inject } from '@vercel/analytics';
+inject();
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -176,3 +179,4 @@ class App extends Component {
 }
 
 export default App;
+

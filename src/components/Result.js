@@ -47,6 +47,10 @@ function Result(props) {
   const shareUrl = 'https://paperguessr.vercel.app/';
   const title = "I got " + props.quizResult + " points on paperguerssr";
   const hashtags = ["paperguessr"];
+  // fetch ranking data
+  ///const ranking = [];
+  //const rankingUrl = 'https://paperguessr.vercel.app/api/ranking';
+
   return (
     <div>
       <h2>Results</h2>
