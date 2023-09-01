@@ -88,6 +88,12 @@ class App extends Component {
   handleAnswerSelected(event) {
     console.log("on Click\n");
     this.setUserAnswer(event.currentTarget.value);
+    // display the answer is correct or not
+    if (event.currentTarget.value === this.state.correctAnswer) {
+      alert("Correct! The answer is " + this.state.correctAnswer);
+    } else {
+      alert("Wrong! The answer is " + this.state.correctAnswer);
+    }
 
     if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
