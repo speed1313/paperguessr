@@ -26,6 +26,7 @@ import {
   LineIcon,
 
 } from "react-share";
+import axios from 'axios';
 
 function renderResultTable(key) {
   if (key){
@@ -48,8 +49,48 @@ function Result(props) {
   const title = "I got " + props.quizResult + " points on paperguerssr";
   const hashtags = ["paperguessr"];
   // fetch ranking data
-  ///const ranking = [];
-  //const rankingUrl = 'https://paperguessr.vercel.app/api/ranking';
+  const pointsUrl = 'https://paperguessr-backend.onrender.com/points';
+  // fetch only once
+  const [scoreTable, setScoreTable] = React.useState([0, 0, 0, 0, 0, 0]);
+
+    // post result
+  const postResultUrl = 'https://paperguessr-backend.onrender.com/points/';
+  React.useEffect(() => {
+    const postResult = async () => {
+      try {
+        const response = await axios.get(postResultUrl + props.quizResult, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        console.log(response);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+    postResult();
+  }, []);
+
+  // fetch ranking data
+  React.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(pointsUrl);
+        response.data.map((point, score) => {
+          scoreTable[point] = score;
+        });
+        setScoreTable(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+    fetchData();
+  }, []);
+
+
+
+
+
 
   return (
     <div>
@@ -59,8 +100,36 @@ function Result(props) {
         <ol>
           {props.resultTable.map(renderResultTable)}
         </ol>
+      </div>
+      <div className="ResultTable">
+        <h3>Ranking</h3>
+        <table>
+          <tr>
+            <th>Points</th>
+            <th>People</th>
+          </tr>
+          {scoreTable.map((score, index) => {
+            if (props.quizResult == index)
+              return (
+                <tr>
+                  <td><strong>{index}</strong></td>
+                  <td><strong>{score.count}</strong></td>
+                </tr>
+              )
+
+            return (
+              <tr>
+                <td>{index}</td>
+                <td>{score.count}</td>
+              </tr>
+            );
+          })}
+        </table>
 
       </div>
+      <h3>Share</h3>
+
+
 
 
       <div className="Demo__some-network">

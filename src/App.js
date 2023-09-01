@@ -23,7 +23,8 @@ class App extends Component {
       correctAnswer: '',
       answersCount: 0,
       resultTable: [],
-      result: ''
+      result: '',
+      scoreTable: [0, 0, 0, 0, 0],
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -83,7 +84,8 @@ class App extends Component {
       correctAnswer: quizQuestions[0].answer,
       answersCount: 0,
       resultTable: [],
-      result: ''
+      result: '',
+      scoreTable: [0, 0, 0, 0, 0],
     });
   }
 
@@ -92,11 +94,11 @@ class App extends Component {
     console.log("on Click\n");
     this.setUserAnswer(event.currentTarget.value);
     // display the answer is correct or not
-    if (event.currentTarget.value === this.state.correctAnswer) {
+    /*if (event.currentTarget.value === this.state.correctAnswer) {
       alert("Correct! The answer is " + this.state.correctAnswer);
     } else {
       alert("Wrong! The answer is " + this.state.correctAnswer);
-    }
+    }*/
 
     if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
@@ -161,9 +163,14 @@ class App extends Component {
       />
     );
   }
+  onUpdateScoreTable = (scoreTable) => {
+    this.setState({
+      resultTable: scoreTable
+    });
+  }
 
   renderResult() {
-    return <Result quizResult={this.state.result} onRestart={this.handleRestart} resultTable={this.state.resultTable} />;
+    return <Result quizResult={this.state.result} onRestart={this.handleRestart} resultTable={this.state.resultTable} onUpdateScoreTable={this.onUpdateScoreTable} scoreTable={this.state.scoreTable} />;
   }
 
   render() {
