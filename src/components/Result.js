@@ -101,7 +101,7 @@ function Result(props) {
           {props.resultTable.map(renderResultTable)}
         </ol>
       </div>
-      <div className="ResultTable">
+      <div className="RankingTable">
         <h3>Ranking</h3>
         <table>
           <tr>
@@ -119,8 +119,8 @@ function Result(props) {
 
             return (
               <tr>
-                <td>{index}</td>
-                <td>{score.count}</td>
+                <td><small>{index}</small></td>
+                <td><small>{score.count}</small></td>
               </tr>
             );
           })}
